@@ -3,51 +3,112 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Madzoo</title>
+  <title>MadZoo Portfolio</title>
   <style>
-    body {
+    * {
       margin: 0;
       padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f0f0f0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
+      box-sizing: border-box;
     }
 
-    .container {
-      background-color: white;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f0f0;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #003366;
+      color: white;
+      padding: 20px 0;
       text-align: center;
     }
 
-    .title {
-      font-size: 28px;
+    nav {
+      background-color: #0055aa;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
       font-weight: bold;
-      color: #333;
-      margin-bottom: 20px;
     }
 
-    img {
-      width: 400px;
-      max-width: 100%;
+    .container {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    .about,
+    .projects,
+    .contact {
+      margin-bottom: 40px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
       border-radius: 10px;
-      transition: transform 0.3s ease;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
 
-    img:hover {
-      transform: scale(1.05);
+    footer {
+      text-align: center;
+      background: #003366;
+      color: white;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
     }
   </style>
 </head>
 <body>
+  <header>
+    <h1>MadZoo Digital</h1>
+    <p>Web Design & Cloud Development</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
   <div class="container">
-    <div class="title">Madzoo</div>
-    <img src="OIP.jpg" alt="image" />
+    <section id="about" class="about card">
+      <h2>About Us</h2>
+      <p>MadZoo Digital is a creative cloud-first company that specializes in designing and deploying modern web solutions. We blend design with technology to deliver digital experiences that stand out.</p>
+    </section>
+
+    <section id="projects" class="projects card">
+      <h2>Our Projects</h2>
+      <ul>
+        <li><strong>Azure Cloud Migration</strong> – A complete migration of legacy infrastructure to Microsoft Azure.</li>
+        <li><strong>E-Commerce Site</strong> – Developed and deployed an e-commerce platform using HTML, CSS, and integrated with PayPal.</li>
+        <li><strong>Portfolio Builder</strong> – Designed a lightweight, responsive template for freelancers and small businesses.</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="contact card">
+      <h2>Contact Us</h2>
+      <p>Email: contact@madzoodigital.com</p>
+      <p>Phone: +1 234 567 8901</p>
+    </section>
   </div>
+
+  <footer>
+    <p>&copy; 2025 MadZoo Digital. All rights reserved.</p>
+  </footer>
 </body>
 </html>
