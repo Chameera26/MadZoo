@@ -1,35 +1,30 @@
-/* Reset & base styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f9f9f9;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f9f9f9;
+  color: #333;
 }
 
-/* Navbar styles */
 .navbar {
-  background-color: #1e2a38;
-  color: #fff;
+  background: #002244;
+  color: white;
   padding: 15px 25px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .brand {
-  font-size: 1.6rem;
-  font-weight: bold;
+  font-size: 1.5rem;
   color: #00d8ff;
 }
 
 .nav-links {
-  display: flex;
   list-style: none;
+  display: flex;
   gap: 20px;
 }
 
@@ -37,62 +32,52 @@ body {
   color: white;
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.3s;
 }
 
 .nav-links a:hover {
   color: #00d8ff;
 }
 
-/* Dropdown */
-.dropdown {
-  position: relative;
-}
-
-.dropdown-menu {
-  display: none;
-  position: absolute;
-  background-color: #ffffff;
-  top: 40px;
-  left: 0;
-  min-width: 160px;
-  list-style: none;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  z-index: 1000;
-}
-
-.dropdown-menu li a {
-  color: #1e2a38;
-  padding: 10px 15px;
-  display: block;
-}
-
-.dropdown:hover .dropdown-menu {
-  display: block;
-}
-
-/* Toggle button for mobile */
 .toggle-btn {
   display: none;
-  font-size: 24px;
+  font-size: 26px;
   cursor: pointer;
 }
 
-@media screen and (max-width: 768px) {
+.section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+.section h2 {
+  margin-bottom: 20px;
+  color: #002244;
+}
+
+footer {
+  background: #002244;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
   .toggle-btn {
     display: block;
   }
 
   .nav-links {
-    position: absolute;
-    top: 60px;
-    left: 0;
-    right: 0;
     flex-direction: column;
-    background-color: #1e2a38;
+    background: #002244;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 60px;
     display: none;
-    padding: 15px 0;
   }
 
   .nav-links.show {
@@ -100,24 +85,7 @@ body {
   }
 
   .nav-links li {
-    text-align: center;
     padding: 10px 0;
-  }
-
-  .dropdown-menu {
-    position: static;
-    background-color: #2a3b4d;
-  }
-
-  .dropdown-menu li a {
-    color: white;
-  }
-
-  .dropdown:hover .dropdown-menu {
-    display: none;
-  }
-
-  .dropdown.open .dropdown-menu {
-    display: block;
+    text-align: center;
   }
 }

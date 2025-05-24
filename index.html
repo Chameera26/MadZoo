@@ -2,30 +2,62 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SkyTech Solutions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MadZoo Digital</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <nav class="navbar">
-    <div class="brand">SkyTech</div>
+    <div class="brand">MadZoo</div>
     <div class="toggle-btn" onclick="toggleMenu()">☰</div>
     <ul class="nav-links" id="navLinks">
-      <li><a href="#">Home</a></li>
-      <li class="dropdown">
-        <a href="#">Services</a>
-        <ul class="dropdown-menu">
-          <li><a href="#">Web Design</a></li>
-          <li><a href="#">Cloud Hosting</a></li>
-          <li><a href="#">Security</a></li>
-        </ul>
-      </li>
-      <li><a href="#">Projects</a></li>
-      <li><a href="#">Team</a></li>
-      <li><a href="#">Contact</a></li>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#team">Team</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
+
+  <section id="home" class="section">
+    <h1>Welcome to MadZoo Digital</h1>
+    <p>We build secure, scalable digital platforms to help your business thrive in the cloud era.</p>
+  </section>
+
+  <section id="services" class="section">
+    <h2>Our Services</h2>
+    <ul>
+      <li>🔧 Web Development (HTML, CSS, JS, React)</li>
+      <li>☁️ Cloud Solutions (Azure, AWS, OpenStack)</li>
+      <li>🔐 Cybersecurity Consulting</li>
+      <li>📊 Data Analytics & Visualization</li>
+    </ul>
+  </section>
+
+  <section id="projects" class="section">
+    <h2>Featured Projects</h2>
+    <p><strong>Case Study:</strong> Migrated a retail platform to Azure, reducing costs by 40% and improving performance by 60%.</p>
+    <p><strong>Client:</strong> Startup CRM Tool – Developed a responsive web app using modern frameworks.</p>
+  </section>
+
+  <section id="team" class="section">
+    <h2>Meet the Team</h2>
+    <p><strong>Amira Johnson</strong> – Cloud Architect with 10+ years in Azure infrastructure.</p>
+    <p><strong>Raj Patel</strong> – Frontend Developer and UI/UX designer.</p>
+    <p><strong>Lena Nguyen</strong> – Project Manager and Agile expert.</p>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <p>Email: info@skytechdigital.com</p>
+    <p>Phone: +1 800 234 5678</p>
+    <p>Location: 55 Cloud St, Tech Valley, CA</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 MadZoo Digital. All rights reserved.</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
